@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smoke Signals BBQ Reviews</title>
+  <meta name="theme-color" content="#ff7a18" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icons/icon-192.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <h1>🔥 Smoke Signals</h1>
+    <p>Share and discover the best barbecue spots in town.</p>
+    <button id="install-btn" type="button" hidden>Install App</button>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Add a Review</h2>
+      <form id="review-form">
+        <label>
+          BBQ Spot
+          <input id="spot" type="text" placeholder="e.g., Pitmaster Palace" required />
+        </label>
+        <label>
+          Dish
+          <input id="dish" type="text" placeholder="e.g., Brisket Plate" required />
+        </label>
+        <label>
+          Rating
+          <select id="rating" required>
+            <option value="5">5 - Legendary</option>
+            <option value="4">4 - Great</option>
+            <option value="3">3 - Solid</option>
+            <option value="2">2 - Meh</option>
+            <option value="1">1 - Dry sadness</option>
+          </select>
+        </label>
+        <label>
+          Notes
+          <textarea id="notes" rows="3" placeholder="Sauce, smoke ring, tenderness, sides..."></textarea>
+        </label>
+        <button type="submit">Save Review</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <div class="reviews-header">
+        <h2>Recent Reviews</h2>
+        <label>
+          Filter rating
+          <select id="filter-rating">
+            <option value="all">All ratings</option>
+            <option value="5">5 stars</option>
+            <option value="4">4 stars</option>
+            <option value="3">3 stars</option>
+            <option value="2">2 stars</option>
+            <option value="1">1 star</option>
+          </select>
+        </label>
+      </div>
+      <ul id="reviews"></ul>
+    </section>
+  </main>
+
+  <template id="review-item-template">
+    <li class="review-item">
+      <div class="review-top">
+        <h3></h3>
+        <span class="stars"></span>
+      </div>
+      <p class="dish"></p>
+      <p class="notes"></p>
+      <small class="date"></small>
+    </li>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>

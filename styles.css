@@ -1,0 +1,157 @@
+:root {
+  color-scheme: dark;
+  --bg: #1a1512;
+  --card: #2a211d;
+  --text: #f8efe7;
+  --accent: #ff7a18;
+  --accent-soft: #ff9f57;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: linear-gradient(180deg, #120d0b 0%, var(--bg) 100%);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.hero {
+  padding: 2.5rem 1rem 1.5rem;
+  text-align: center;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 2.25rem;
+}
+
+.hero p {
+  margin-top: 0.5rem;
+  color: #ffd9bf;
+}
+
+.hero #install-btn {
+  margin-top: 0.75rem;
+}
+
+
+.container {
+  width: min(980px, 92vw);
+  margin: 0 auto 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid #4e3b31;
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+label {
+  display: grid;
+  gap: 0.35rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+input,
+textarea,
+select {
+  border: 1px solid #6d5244;
+  border-radius: 8px;
+  background: #1d1613;
+  color: var(--text);
+  padding: 0.6rem 0.7rem;
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.75rem 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--accent-soft);
+}
+
+.reviews-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 0.75rem;
+}
+
+.reviews-header label {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+#reviews {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.review-item {
+  border: 1px solid #5f473b;
+  border-radius: 10px;
+  background: #201915;
+  padding: 0.75rem;
+}
+
+.review-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.7rem;
+  align-items: center;
+}
+
+.review-top h3,
+.review-item p {
+  margin: 0;
+}
+
+.stars {
+  color: #ffd166;
+  letter-spacing: 1px;
+}
+
+.dish {
+  margin-top: 0.35rem !important;
+  color: #ffc89f;
+}
+
+.notes {
+  margin-top: 0.25rem !important;
+  color: #f0e2d6;
+}
+
+small {
+  display: block;
+  margin-top: 0.45rem;
+  color: #bea08c;
+}
